@@ -1,146 +1,139 @@
-#  Laravel Website për Dyqan Lulesh
+# Laravel Flower Shop Website
 
-Ky është një aplikacion web i ndërtuar me **Laravel** që simulon funksionalitetet e një dyqani Lulesh online. Përdoruesit mund të shikojnë produkte, të regjistrohen, të kyçen, të shtojnë artikuj në shportë dhe të bëjnë porosi. Administratorët mund të menaxhojnë produktet, kategoritë dhe porositë.
-
----
-
-## Teknologjitë e Përdorura
-
- Teknologjia         Qëllimi                                                                 
-
- **PHP (Laravel)**   Framework-i kryesor për backend, strukturën MVC dhe logjikën e aplikacionit 
- **HTML5**            Strukturimi i faqeve dhe përdorimi i formave interaktive               
- **CSS3**             Stilimi i faqes dhe përditësimi vizual me dizajn modern               
-**Bootstrap**        Ndihmë për dizajnin responsive dhe komponente të para-bëra            
-**JavaScript**       Ndërveprimet në faqe, validime dhe efekte                             
-**XML**              Strukturim i të dhënave për produkte ose eksport/import të informacionit (në disa module) 
- **MySQL**            Baza e të dhënave për ruajtjen e përdoruesve, porosive dhe produkteve 
-**Blade (Laravel)**  Template engine për gjenerim dinamik të HTML-it në Laravel             
+This is a web application built with **Laravel** that simulates the functionality of an online flower shop. Users can browse products, register, log in, add items to their cart, and place orders. Administrators can manage products, categories, and orders.
 
 ---
 
-##  Autentikimi
+## Technologies Used
 
-Autentikimi është implementuar përmes sistemit të integruar të Laravel, dhe përfshin:
-
-- Regjistrim dhe kyçje për përdoruesit
-- Panel i veçantë për administratorët
-- Mbrojtje e rrotave përmes middleware `auth`
-- Ruajtje e të dhënave në databazë përmes Laravel Eloquent ORM
-
-**Shembull:**  
-Përdorimi i `Auth::check()`, `Auth::user()` dhe `auth middleware` për të kontrolluar aksesin.
-
----
-
-##  Përdorimi i HTML5
-
-HTML5 është përdorur për:
-
-- Strukturën semantike të faqeve (`<header>`, `<footer>`, `<section>`)
-- Forma me atribute të avancuara (`type="email"`, `required`, `placeholder`)
-- Validim bazik nga browser-i për inputet e formës
+| Technology | Purpose |
+| --- | --- |
+| **PHP (Laravel)** | The main backend framework for the MVC structure and application logic |
+| **HTML5** | Page structure and interactive forms |
+| **CSS3** | Page styling and a modern visual design |
+| **Bootstrap** | Responsive design support and prebuilt components |
+| **JavaScript** | Page interactions, validation, and effects |
+| **XML** | Structured product data and product information import/export in selected modules |
+| **MySQL** | Database storage for users, orders, and products |
+| **Blade (Laravel)** | Template engine for dynamically generating HTML in Laravel |
 
 ---
 
-## Përdorimi i CSS
+## Authentication
 
-- CSS dhe Bootstrap janë përdorur për të krijuar një ndërfaqe të pastër dhe responsive.
-- Stilizim i kartelave të produkteve, navbar-it, formularëve, etj.
-- Klasat e Bootstrap si `container`, `row`, `col-md-*`, `btn`, `card`, etj. janë përdorur në masë të madhe.
+Authentication is implemented using Laravel's built-in system and includes:
 
----
+- User registration and login
+- A separate administration panel
+- Route protection through the `auth` middleware
+- Database persistence through the Laravel Eloquent ORM
 
-## Përdorimi i XML
+**Example:**
 
-XML është përdorur në module të veçanta të projektit për:
-
-- Ruajtjen strukturore të disa të dhënave statike ose backup të produkteve
-- Mundësi importimi ose eksportimi në format XML për produkte ose porosi (në versionet e avancuara ose shtesat e projektit)
+`Auth::check()`, `Auth::user()`, and the `auth` middleware are used to control access.
 
 ---
 
-## Struktura e Projektit
+## Use of HTML5
+
+HTML5 is used for:
+
+- Semantic page structure (`<header>`, `<footer>`, `<section>`)
+- Forms with advanced attributes (`type="email"`, `required`, `placeholder`)
+- Basic browser-side validation for form inputs
+
+---
+
+## Use of CSS
+
+- CSS and Bootstrap are used to create a clean, responsive interface.
+- Product cards, the navbar, forms, and other elements are styled throughout the website.
+- Bootstrap classes such as `container`, `row`, `col-md-*`, `btn`, and `card` are used extensively.
+
+---
+
+## Use of XML
+
+XML is used in selected project modules for:
+
+- Structured storage of static data or product backups
+- Importing or exporting products and orders in XML format in advanced versions or extensions of the project
+
+---
+
+## Project Structure
 
 ```
-laravel_website_cake_shop_project/
+flower_shop_project/
 │
-├── app/                   # Kontrolluesit, modelet dhe logjika e biznesit
-├── public/                # Asset-et publike si CSS, JS dhe imazhet
+├── app/                   # Controllers, models, and business logic
+├── public/                # Public assets such as CSS, JavaScript, and images
 ├── resources/
-│   ├── views/             # Blade templates për faqet
-│   └── css, js            # Fajllat e stilimit dhe funksionaliteteve
+│   ├── views/             # Blade templates for the pages
+│   └── css, js            # Styling and functionality files
 ├── routes/
-│   └── web.php            # Rrugët e aplikacionit
+│   └── web.php            # Application routes
 ├── database/
-│   ├── migrations/        # Migrimet e tabelave
-│   └── seeders/           # Mbushja fillestare e të dhënave
-├── .env                   # Konfigurimi i databazës dhe settings të tjera
-└── README.md              # Dokumentimi i projektit
+│   ├── migrations/        # Database table migrations
+│   └── seeders/           # Initial data population
+├── .env                   # Database configuration and other settings
+└── README.md              # Project documentation
 ```
 
 ---
 
-## Funksionalitetet Kryesore
+## Key Features
 
--  Regjistrim dhe kyçje e përdoruesve
--  Panel administrimi për menaxhimin e produkteve dhe kategorive
--  Faqe produktesh dhe detaje të produkteve
--  Shtim i produkteve në shportë
--  Blerje dhe menaxhim i porosive
--  Roli i Administratorit me akses të plotë
+- User registration and login
+- Administration panel for managing products and categories
+- Product listing and product detail pages
+- Adding products to the shopping cart
+- Purchasing and order management
+- Administrator role with full access
 
 ---
 
-## Demo të Projektit
+## Project Demo
 
-Vendosni pamje të ekranit këtu për të demonstruar projektin:
+Add screenshots here to demonstrate the project:
 
-```
-![Pamja Kryesore](screenshots/homepage.png)
+![Homepage](screenshots/homepage.png)
 ![Login](screenshots/login.png)
-![Shporta](screenshots/cart.png)
-![Paneli Admin](screenshots/admin_panel.png)
-```
-
->
+![Shopping Cart](screenshots/cart.png)
+![Admin Panel](screenshots/admin_panel.png)
 
 ---
 
-## Si ta Nisesh Projektin Lokalisht
+## How to Run the Project Locally
 
-
-```
-
-1. Hape projektin dhe instalo varësitë:
+1. Open the project and install the dependencies:
 
 ```bash
-cd emri projektit
+cd project-name
 composer install
 npm install && npm run dev
 ```
 
-2. Konfiguro `.env`:
+2. Configure `.env`:
 
 ```bash
 cp .env.example .env
 php artisan key:generate
 ```
 
-3. Krijo dhe migro databazën:
+3. Create and migrate the database:
 
 ```bash
 php artisan migrate
 ```
 
-4. Nise serverin:
+4. Start the development server:
 
 ```bash
 php artisan serve
 ```
 
-Demo photo
-
+## Screenshots
 
 <p>
   <img src="screenshots/readme1.png" alt="Demo 1" width="600"/>
@@ -155,7 +148,6 @@ Demo photo
   <img src="screenshots/readme4.png" alt="Demo 4" width="600"/>
 </p>
 
-
-> Ky projekt është zhvilluar si pjesë e një detyre mësimore.  
+> This project was developed as part of an educational assignment.
 
 ---
